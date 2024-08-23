@@ -1,0 +1,133 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .title {
+    margin: 20px 0 0 0;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .movie-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .movie-card {
+    position: relative;
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .movie-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .movie-title {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #d1c4e9; 
+  }
+  
+  .movie-card:hover .movie-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
+  
+  .movie-card::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .movie-card:hover::before {
+    opacity: 1;
+  }
+  
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh; 
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto; 
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal-movie-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-info {
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .logo{
+    width: 60px;
+    height: 60px;
+    transform: rotate(96deg);
+  }
+
+  .webname{
+    margin-top: 8px;
+    
+  }
